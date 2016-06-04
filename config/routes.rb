@@ -1,15 +1,17 @@
 Rails.application.routes.draw do
 
-  get 'plants/index'
+  devise_for :user
 
-  get 'plants/show'
+  root to: "statics#welcome"
+
+  get '/users/:id', to: "users#show"
+
+  get '/plants/:id', to: "plants#show"
+
+  get '/plants/', to: "plants#index"
 
   get 'plants/edit'
 
-  devise_for :users
-  root to: "statics#welcome"
-
-  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
