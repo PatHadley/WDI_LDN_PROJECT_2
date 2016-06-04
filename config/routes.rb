@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'plants/index'
+
+  get 'plants/show'
+
+  get 'plants/edit'
+
   devise_for :users
   root to: "statics#welcome"
 
