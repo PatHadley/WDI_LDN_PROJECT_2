@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   devise_for :user
+  resources :users
+  resources :plants
 
   root to: "statics#welcome"
 

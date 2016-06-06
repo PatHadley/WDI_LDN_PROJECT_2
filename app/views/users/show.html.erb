@@ -2,9 +2,12 @@
 <h4><em><%= @user.email %></em></h4>
 
 <h3>Are you available to water other GreenDiggers' plants?</h3>
-<%= form_tag :action => 'edit', :id => @user  %>
-  <%= check_box("users", "available" , {}, "I'm available", "I'm busy")%>
 
+<% if @user.available == true %>
+  <h4>Available</h4>
+<% else %>
+  <h4>Not Available</h4>
+<% end %>
 
 <%= render template: "plants/index", :locals => {:@plants => Plant.all}%>
 
