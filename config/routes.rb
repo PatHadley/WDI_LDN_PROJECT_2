@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
 
   devise_for :user
-  resources :users
-  resources :plants
 
   root to: "statics#welcome"
 
@@ -10,12 +8,13 @@ Rails.application.routes.draw do
 
   put '/users/:id/edit', to: "users#edit"
 
+  get '/add_plant_to_user/:id', to: "plants#add_plant_to_user", as: "add_plant_to_user"
+
   get '/plants/:id', to: "plants#show"
 
   get '/plants/', to: "plants#index"
 
   get 'plants/edit'
-
   # get 'plants/add_plant_to_user/:id', to: 'plants#add_plant_to_user', as 'add_plant_to_user'
 
   # The priority is based upon order of creation: first created -> highest priority.

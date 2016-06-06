@@ -12,8 +12,9 @@ class PlantsController < ApplicationController
   end
 
   def add_plant_to_user
-      @mynewplant = Plant.find_by(params[:name])
-      current_user.plants.push(@mynewplant)
-      flash[:notice] = 'You added #{@mynewplant.name}!'
+    mynewplant = Plant.find(params[:id])
+    current_user.plants.push(mynewplant)
+
+    redirect_to :back
   end
 end

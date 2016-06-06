@@ -4,6 +4,6 @@
 <ul>
   <li><strong><%= plant.name %></strong></li>
   <li><em><%= plant.species %></em></li>
-
+  <li><%= link_to "Add Plant", add_plant_to_user_path(plant) %></li>
 </ul>
 <% end %>

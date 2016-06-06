@@ -9,5 +9,13 @@
   <h4>Not Available</h4>
 <% end %>
 
+
+<% @user.plants.each do |plant| %>
+  <ul>
+    <li><%= plant.name %></li>
+  </ul>
+<% end %>
+
+
 <%= render template: "plants/index", :locals => {:@plants => Plant.all}%>
 
