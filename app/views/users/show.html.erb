@@ -11,7 +11,7 @@
   <p><%= link_to "Make me available", change_available_path(@user) %></p>
 <% end %>
 
-
+<h3>My plants</h3>
 <% @user.plants.each do |plant| %>
   <ul>
     <li><%= plant.name %></li>

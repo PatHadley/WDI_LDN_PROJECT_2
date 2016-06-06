@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   root to: "statics#welcome"
 
-  get '/users/:id', to: "users#show"
+  get '/users', to: "users#index"
+
+  get '/users/:id', to: "users#show", as: "user_display"
 
   put '/users/:id/edit', to: "users#edit"
 
