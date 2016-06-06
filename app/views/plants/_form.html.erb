@@ -1,0 +1,5 @@
+<%= form_for [:plants, @add_plant_to_user], :action => 'new', :id => @mynewplant do |f|%>
+      <%= f.hidden @user = current_user %>
+      <%= f.hidden @mynewplant = Plant.find_by(params[:name]) %>
+      <%= f.submit "I have this plant!" %>
+<% end %>
