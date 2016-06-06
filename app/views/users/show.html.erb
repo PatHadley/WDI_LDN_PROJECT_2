@@ -1,4 +1,7 @@
 <h2><%= @user.username %></h2>
+
+<%= link_to "Email this user", "mailto:#{@user.email}" %>
+<p>Be careful online. This button will reveal your email address to the user you contact</p>
 <h4><em><%= @user.email %></em></h4>
 
 <h3>Is this user available to water plants?</h3>
@@ -13,6 +16,5 @@
 <% @user.plants.each do |plant| %>
   <ul>
     <li><%= plant.name %></li>
-    <li><%= link_to "Remove Plant", remove_plant_from_user_path(plant) %></li>
   </ul>
 <% end %>

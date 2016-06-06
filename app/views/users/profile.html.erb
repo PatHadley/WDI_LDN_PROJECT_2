@@ -5,11 +5,14 @@
 
 <% if @user.available == true %>
   <h4>I'm available!</h4>
-  <p><%= link_to "Make me unavailable", change_available_path(@user) %></p>
+  <%= button_to "Make me unavailable", change_available_path(@user) %>
 <% else %>
   <h4>I'm not available!</h4>
-  <p><%= link_to "Make me available", change_available_path(@user) %></p>
+  <%= button_to "Make me available", change_available_path(@user) %>
 <% end %>
+<br>
+<br>
+<%= button_to "Edit my info", edit_user_registration_path %> 
 
 <h3>My plants</h3>
 <% @user.plants.each do |plant| %>

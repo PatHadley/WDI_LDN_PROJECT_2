@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   put '/users/:id/edit', to: "users#edit"
 
-  get '/users/change_available/:id', to: "users#change_available", as: "change_available"
+  post '/users/change_available/:id', to: "users#change_available", as: "change_available"
 
   get '/add_plant_to_user/:id', to: "plants#add_plant_to_user", as: "add_plant_to_user"
   
@@ -23,6 +23,9 @@ Rails.application.routes.draw do
   get '/plants/', to: "plants#index"
 
   get 'plants/edit'
+ 
+
+
   # get 'plants/add_plant_to_user/:id', to: 'plants#add_plant_to_user', as 'add_plant_to_user'
 
   # The priority is based upon order of creation: first created -> highest priority.
