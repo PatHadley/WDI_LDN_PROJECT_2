@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   put '/users/:id/edit', to: "users#edit"
 
   get '/add_plant_to_user/:id', to: "plants#add_plant_to_user", as: "add_plant_to_user"
+  get '/remove_plant_from_user/:id', to: "plants#remove_plant_from_user", as: "remove_plant_from_user"
 
   get '/plants/:id', to: "plants#show"
 

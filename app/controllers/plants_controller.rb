@@ -17,4 +17,11 @@ class PlantsController < ApplicationController
 
     redirect_to :back
   end
+
+  def remove_plant_from_user
+    mynewplant = Plant.find(params[:id])
+    current_user.plants.destroy(mynewplant)
+
+    redirect_to :back
+  end
 end

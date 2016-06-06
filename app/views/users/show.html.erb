@@ -13,6 +13,7 @@
 <% @user.plants.each do |plant| %>
   <ul>
     <li><%= plant.name %></li>
+    <li><li><%= link_to "Remove Plant", remove_plant_from_user_path(plant) %></li></li>
   </ul>
 <% end %>
 
