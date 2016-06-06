@@ -10,8 +10,9 @@
     <nav>
       <ul>
         <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "User list", user_list_path %></li>
         <% if current_user %>
-          <li><a href="/users/<%= current_user.id %>"><%= current_user.username %></a></li>
+          <li><%= link_to "#{current_user.username}", user_display_path(current_user) %></li>
           <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
           <li><%= link_to "Edit profile", edit_user_registration_path %></li>
         <% else %>
