@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get '/users/:id', to: "users#show", as: "user_display"
 
+  get '/profile', to: "users#profile", as: "my_profile"
+
   put '/users/:id/edit', to: "users#edit"
 
   get '/users/change_available/:id', to: "users#change_available", as: "change_available"
