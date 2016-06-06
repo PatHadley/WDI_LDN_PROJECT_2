@@ -4,12 +4,12 @@
 <h3>Are you available to water other GreenDiggers' plants?</h3>
 
 <% if @user.available == true %>
-  <h4>Available</h4>
+  <h4>I'm available!</h4>
+  <p><%= link_to "Make me unavailable", change_available_path(@user) %></p>
 <% else %>
-  <h4>Not Available</h4>
+  <h4>I'm not available!</h4>
+  <p><%= link_to "Make me available", change_available_path(@user) %></p>
 <% end %>
-
-<%= render template: "devise/registrations/edit" %>
 
 
 <% @user.plants.each do |plant| %>
@@ -18,7 +18,6 @@
     <li><%= link_to "Remove Plant", remove_plant_from_user_path(plant) %></li>
   </ul>
 <% end %>
-
 
 <%= render template: "plants/index", :locals => {:@plants => Plant.all}%>
 
