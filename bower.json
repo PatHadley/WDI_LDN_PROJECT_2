@@ -1,0 +1,17 @@
+{
+  "name": "WDI_LDN_PROJECT_2",
+  "homepage": "https://github.com/PatHadley/WDI_LDN_PROJECT_2",
+  "authors": [
+    "Pat Hadley <pat@pathadley.net>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
