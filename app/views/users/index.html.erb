@@ -1,8 +1,10 @@
 <% @users.each do |user| %>
-<ul>
+<ul class="list-group">
   <% if user.available == true && user != current_user %>
-  <li><%= link_to "#{user.username}", user_display_path(user) %></li>
-  <h4>I'm available!</h4>
+  <li class="list-group-item"><h4>
+    <%= link_to "#{user.username}", user_display_path(user) %></h4>
+    <strong>I'm available!</strong>
+  </li>
   <% end %>
 </ul>
 <% end %>

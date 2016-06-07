@@ -1,6 +1,23 @@
 #availToggle {
   background: $mid_green;
   border-radius: 5px;
-
+  padding: 10px;
+  padding-bottom: 20px;
+  margin-bottom: 16px;
+  .btn {
+    float:right;
+    margin-bottom: 10px;
+  }
 }
 
+#diggerList {
+  padding: 10px;
+}
+
+.list-group-item {
+  padding-bottom: 20px;
+}
+
+.listLink {
+  float: right;
+}

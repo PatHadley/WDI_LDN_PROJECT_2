@@ -1,9 +1,9 @@
-<h1> Full Houseplant List</h1>
+<h1>Full Houseplant List</h1>
 
 <% @plants.each do |plant| %>
-<ul>
-  <li><strong><%= plant.name %></strong></li>
-  <li><em><%= plant.species %></em></li>
-  <li><%= link_to "Add Plant", add_plant_to_user_path(plant) %></li>
+<ul class="list-group">
+  <li class="list-group-item"><strong><%= plant.name %></strong><br>
+  <em><%= plant.species %></em><br>
+  <span class="listLink"><%= link_to "Add to My plants", add_plant_to_user_path(plant) %></span></li>
 </ul>
 <% end %>

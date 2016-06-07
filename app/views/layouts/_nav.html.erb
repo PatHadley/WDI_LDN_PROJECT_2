@@ -3,7 +3,6 @@
     <div class="navbar-brand <%= cp(root_path)%>" role="presentation"><h1><%= link_to "GreenDigits", root_path %></h1></div>
     <% if current_user %>
       <ul id="mainNav" class="nav nav-tabs navbar-right">
-        <li class="<%= cp(user_list_path)%>" role="presentation"><%= link_to "Find GreenDiggers", user_list_path, class: cp(user_list_path) %></li>
         <li class="<%= cp(my_profile_path)%>" role="presentation"><%= link_to "#{current_user.username}", my_profile_path %></li>
         <li class="<%= cp(destroy_user_session_path)%>" role="presentation"><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
       </ul>
