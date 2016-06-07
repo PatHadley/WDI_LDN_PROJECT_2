@@ -1,13 +1,17 @@
-<nav class="container-fluid">
-  <ul class="nav nav-tabs">
-    <li class="<%= cp(root_path)%>" role="presentation"><%= link_to "Home", root_path %></li>
+<nav class="navbar navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-brand <%= cp(root_path)%>" role="presentation"><h1><%= link_to "GreenDigits", root_path %></h1></div>
     <% if current_user %>
-      <li class="<%= cp(user_list_path)%>" role="presentation"><%= link_to "Find GreenDiggers", user_list_path, class: cp(user_list_path) %></li>
-      <li class="<%= cp(my_profile_path)%>" role="presentation"><%= link_to "#{current_user.username}", my_profile_path %></li>
-      <li class="<%= cp(destroy_user_session_path)%>" role="presentation"><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+      <ul id="mainNav" class="nav nav-tabs navbar-right">
+        <li class="<%= cp(user_list_path)%>" role="presentation"><%= link_to "Find GreenDiggers", user_list_path, class: cp(user_list_path) %></li>
+        <li class="<%= cp(my_profile_path)%>" role="presentation"><%= link_to "#{current_user.username}", my_profile_path %></li>
+        <li class="<%= cp(destroy_user_session_path)%>" role="presentation"><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+      </ul>
     <% else %>
-      <li class="<%= cp(new_user_session_path)%>"role="presentation"><%= link_to "Sign in", new_user_session_path %></li>
-      <li class="<%= cp(new_user_registration_path)%>" role="presentation"><%= link_to "Register", new_user_registration_path %></li>
+      <ul id="mainNav" class="nav nav-tabs navbar-right">
+        <li class="<%= cp(new_user_session_path)%>"role="presentation"><%= link_to "Sign in", new_user_session_path %></li>
+        <li class="<%= cp(new_user_registration_path)%>" role="presentation"><%= link_to "Register", new_user_registration_path %></li>
+      </ul>
     <% end %>
-  </ul>
+  </div>
 </nav>
