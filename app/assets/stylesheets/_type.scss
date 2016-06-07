@@ -9,6 +9,11 @@ body {
   }
 }
 
+a {
+  color: $dark_green;
+}
+
 a:hover {
   text-decoration: none;
+  color: lighten($dark_green, 15%)
 }
