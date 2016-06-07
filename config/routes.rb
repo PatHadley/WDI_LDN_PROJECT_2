@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get '/profile', to: "users#profile", as: "my_profile"
 
-  post '/users/change_available/:id', to: "users#change_available", as: "change_available"
+  get '/users/change_available/:id', to: "users#change_available", as: "change_available"
 
   get '/add_plant_to_user/:id', to: "plants#add_plant_to_user", as: "add_plant_to_user"
   

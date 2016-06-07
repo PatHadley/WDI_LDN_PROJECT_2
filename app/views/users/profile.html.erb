@@ -9,16 +9,22 @@
       </ul>
     <% end %>
   </div>
-  <div class="col-xs-12 col-sm-6 col-md-4">
-    <h4>Are you available to water other GreenDiggers' plants?
+
+  <div class="col-xs-12 col-sm-6 col-md-4" id="availToggle">
+    <h4>Are you available to water other GreenDiggers' plants?</h4>
     <% if @user.available == true %>
-      I'm available!
-      <%= button_to "Make me unavailable", change_available_path(@user) %>
+      <span class="h4">I'm currently available! (click to change)</span>
+      <%= link_to change_available_path(@user) do %>
+        <button class="btn btn-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+      <% end %>
     <% else %>
-      I'm not available!</h4>
-      <%= button_to "Make me available", change_available_path(@user) %>
+      <span class="h4">I'm not currently available. (click to change)</span>
+      <%= link_to change_available_path(@user) do %>
+        <button class="btn btn-success active"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
+      <% end %>
     <% end %>
   </div>
+
   <div class="col-xs-12 col-sm-6 col-md-4">
     <%= render template: "plants/index", :locals => {:@plants => Plant.all}%>
   </div>
