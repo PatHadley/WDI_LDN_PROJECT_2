@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col-xs-12 col-sm-6 col-md-4">
     <h3>My plants</h3>
+    <img class="img-responsive img-circle" src="<%= @user.profile_pic %>">
     <% @user.plants.each do |plant| %>
       <ul class="list-group">
         <li class="list-group-item"><%= plant.name %><br>
