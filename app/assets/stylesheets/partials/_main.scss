@@ -1,3 +1,12 @@
+main {
+  height: 90vh;
+  margin: 0;
+  * {
+    max-height: 90vh;
+    overflow-y:scroll;
+  }
+}
+
 #availToggle {
   background: $mid_green;
   border-radius: 5px;
@@ -26,7 +35,7 @@
 .jumbotron {
   background-image: url(hero.jpg);
   background-size: cover;
-  height: 100vh;
+  height: 100%;
   h2 {
     color: $dark_green;
     font-size: 300%;
@@ -40,3 +49,10 @@
   margin: 4px;
   display: inline-block;
 }
+.list-group-item {
+  .img-responsive {
+    max-height: 4em;
+  }
+}
+
+

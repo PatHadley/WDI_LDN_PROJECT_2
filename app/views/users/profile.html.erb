@@ -1,12 +1,14 @@
 <div class="row">
-  <div class="col-xs-12 col-sm-6 col-md-4">
+  <div class="left col-xs-12 col-sm-6 col-md-4">
     <% if @user.profile_pic.length > 1 %>
     <%= image_tag(@user.profile_pic, class: "img-responsive img-circle") %>
     <% else %>
       <%= fallback_img %>
     <% end %>
-    <span class="h2"><%= @user.username %></span>
-    <p><%= @user.feedback %></p>
+    <span class="h2"><%= @user.username %>
+    <%= @user.feedback %></span>
+    <span>
+    <small><%= link_to "edit my info", edit_user_registration_path %></small>
     <h3>My plants</h3>
     <% @user.plants.each do |plant| %>
       <ul class="list-group">
@@ -16,7 +18,7 @@
     <% end %>
   </div>
 
-  <div class="col-xs-12 col-sm-6 col-md-4">
+  <div class="middle col-xs-12 col-sm-6 col-md-4">
     <div id="availToggle">
       <h4>Are you available to water other GreenDiggers' plants?</h4>
       <% if @user.available == true %>
@@ -36,16 +38,12 @@
       <%= render template: "users/index", :locals => {:@users => User.all}%>
     </div>
   </div>
-  <div class="col-xs-12 col-sm-6 col-md-4">
+  <div class="right col-xs-12 col-sm-6 col-md-4">
     <%= render template: "plants/index", :locals => {:@plants => Plant.all}%>
   </div>
 
 </div>
 
-
-<div class="row">
-  <%= link_to "Edit my info", edit_user_registration_path %>
-</div>
 
 
 
