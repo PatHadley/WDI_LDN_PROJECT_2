@@ -1,6 +1,5 @@
 module UsersHelper
-  def fdbk_leaves
-    if feedback
-    end
+  def fallback_img
+    image_tag("pineapple1.jpg", class: "img-responsive img-circle")
   end
 end
