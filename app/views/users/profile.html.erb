@@ -6,7 +6,8 @@
       <%= fallback_img %>
     <% end %>
     <span class="h2"><%= @user.username %>
-    <%= @user.feedback %></span>
+    <%= rating_for @user, "feedback", :disable_after_rate => true %>
+    </span>
     <span>
     <small><%= link_to "edit my info", edit_user_registration_path %></small>
     <h3>My plants</h3>

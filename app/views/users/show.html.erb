@@ -5,8 +5,9 @@
     <% else %>
       <%= fallback_img %>
     <% end %>
-    <span class="h2"><%= @user.username %></span>
-    <p><%= @user.feedback %></p>
+    <span class="h2"><%= @user.username %>
+      <%= rating_for @user, "feedback", :disable_after_rate => true %>
+    </span>
 
     <% if @user.available == true %>
       <h4><%= @user.username %> is available to water plants!</h4>
