@@ -2,7 +2,8 @@
 
 <% @plants.each do |plant| %>
 <ul class="list-group">
-  <li class="list-group-item"><strong><%= plant.name %></strong><br>
+  <li class="list-group-item"><strong>
+  <%= link_to "#{plant.name}", plant.link, target: "_blank"%></strong><br>
   <em><%= plant.species %></em><br>
   <span class="listLink"><%= link_to "Add to My plants", add_plant_to_user_path(plant) %></span></li>
 </ul>

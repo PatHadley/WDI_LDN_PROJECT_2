@@ -11,9 +11,9 @@ body {
 
 a {
   color: $dark_green;
+  &:hover {
+    text-decoration: none;
+    color: lighten($dark_green, 15%);
+  }
 }
 
-a:hover {
-  text-decoration: none;
-  color: lighten($dark_green, 15%)
-}
