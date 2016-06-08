@@ -39,9 +39,13 @@ main {
   h2 {
     color: $dark_green;
     font-size: 300%;
+    z-index: 3;
   }
   p {
     color: $off_white;
+    background-color: rgba(146,154,75, 0.4);
+    padding:4px;
+    @include edgeblur;
   }
 }
 .img-responsive {

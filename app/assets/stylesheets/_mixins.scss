@@ -1,0 +1,5 @@
+@mixin edgeblur {
+  -webkit-box-shadow: 0px 0px 36px 30px rgba(146,154,75,0.36);
+  -moz-box-shadow: 0px 0px 36px 30px rgba(146,154,75,0.36);
+  box-shadow: 0px 0px 36px 30px rgba(146,154,75,0.36);
+}
