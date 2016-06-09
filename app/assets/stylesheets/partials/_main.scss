@@ -1,7 +1,7 @@
 main {
   height: 90vh;
   margin: 0;
-  * {
+  .col-xs-12 {
     max-height: 90vh;
     overflow-y:scroll;
   }
@@ -53,7 +53,7 @@ main {
   }
   .panel {
       margin: 6px;
-      padding: 4px;
+      padding: 18px;
   }
 }
 

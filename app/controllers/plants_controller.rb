@@ -1,6 +1,6 @@
 class PlantsController < ApplicationController
   def index
-    @plants = Plant.all.sort_by { |name|plants.name.downcase  }
+    @plants = Plant.all.sort_by { plant.name.downcase  }
   end
 
   def show
