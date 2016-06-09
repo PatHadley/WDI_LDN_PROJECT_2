@@ -23,7 +23,7 @@ main {
   padding: 10px;
 }
 
-.list-group-item {
+.list-group-item{
   padding-bottom: 20px;
   background: $mid_green;
 }
@@ -47,7 +47,16 @@ main {
     padding:4px;
     @include edgeblur;
   }
+  #home-forms{
+    margin: 0 auto;
+    float: none;
+  }
+  .panel {
+      margin: 6px;
+      padding: 4px;
+  }
 }
+
 .img-responsive {
   margin: 4px;
 }
@@ -55,6 +64,10 @@ main {
   .img-responsive {
     max-height: 4em;
   }
+}
+
+.media-object {
+  height: 4em;
 }
 
 

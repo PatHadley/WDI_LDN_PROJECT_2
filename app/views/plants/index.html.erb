@@ -1,10 +1,16 @@
 <h1>Full Houseplant List</h1>
 
 <% @plants.each do |plant| %>
-<ul class="list-group">
-  <li class="list-group-item"><strong>
-  <%= link_to "#{plant.name}", plant.link, target: "_blank"%></strong><br>
-  <em><%= plant.species %></em><br>
-  <span class="listLink"><%= link_to "Add to My plants", add_plant_to_user_path(plant) %></span></li>
+<ul class="media-list list-group">
+  <li class="media list-group-item">
+    <div class="media-left">
+      <%= link_to image_tag("sprout.png", class: "media-object"), plant.link, target: "_blank" %>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading"><%= link_to "#{plant.name}", plant.link, target: "_blank"%></h4>
+      <em><%= plant.species %></em><br>
+      <span class="listLink"><%= link_to "Add to My plants", add_plant_to_user_path(plant) %></span>
+    </div>
+  </li>
 </ul>
 <% end %>

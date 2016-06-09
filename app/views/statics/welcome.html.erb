@@ -2,4 +2,19 @@
 <div class="jumbotron">
   <h2>Welcome to GreenDigits</h2>
   <p>Join the GreenDigits community and meet other <em>GreenDiggers</em> who will help you keep your lovely houseplants healthy!</p>
+  <% if current_user %>
+  
+
+  <% else %>
+    <div class="container">
+      <div id="home-forms" class="row">
+        <div class="panel col-xs-12 col-sm-6 col-md-4">
+         <%= render template: "/devise/registrations/new" %>
+        </div>
+        <div class="panel col-xs-12 col-sm-6 col-md-4">
+          <%= render template: "/devise/sessions/new" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>
