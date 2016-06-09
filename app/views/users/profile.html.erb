@@ -45,7 +45,7 @@
     </div>
   </div>
   <div class="col-xs-12 col-sm-6 col-md-4">
-    <%= render template: "plants/index", :locals => {:@plants => Plant.all}%>
+    <%= render template: "plants/index", :locals => {:@plants => Plant.all, :@q => Plant.ransack(params[:q])}%>
   </div>
 
 </div>

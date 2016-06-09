@@ -1,11 +1,12 @@
 class PlantsController < ApplicationController
+ 
   def index
-    @plants = Plant.all.sort_by { plant.name.downcase  }
+    @q = Plant.ransack(params[:q])
+    @plants = @q.result(distinct: true)
   end
 
   def show
-    id = params[:id]
-    @plant = Plant.find(id)
+    @plant = Plant.find(params[:id])
   end
 
   def edit

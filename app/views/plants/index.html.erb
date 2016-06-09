@@ -1,5 +1,10 @@
 <h1>Full Houseplant List</h1>
 
+<%= search_form_for @q do |f| %>
+  <%= f.label :name_or_species_cont %>
+  <%= f.search_field :name_or_species_cont %>
+<% end %>
+
 <% @plants.each do |plant| %>
 <ul class="media-list list-group">
   <li class="media list-group-item">

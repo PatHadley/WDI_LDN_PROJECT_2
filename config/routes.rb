@@ -19,13 +19,10 @@ Rails.application.routes.draw do
 
   get '/plants/:id', to: "plants#show"
 
-  get '/plants/', to: "plants#index"
+  get '/plants', to: "plants#index"
 
   get 'plants/edit'
  
-
-
-  # get 'plants/add_plant_to_user/:id', to: 'plants#add_plant_to_user', as 'add_plant_to_user'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
