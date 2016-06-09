@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   require "plants_controller"
-  
+  before_action :authenticate_user!
+
   def index
     @users = User.all
   end
@@ -26,5 +27,9 @@ class UsersController < ApplicationController
     end
     @user.save
     redirect_to :back
+  end
+
+  def gd_mail
+    UserMailer.gd_mail
   end
 end
