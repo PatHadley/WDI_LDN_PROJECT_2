@@ -44,8 +44,12 @@
       <%= render template: "users/index", :locals => {:@users => User.all}%>
     </div>
   </div>
-  <div class="col-xs-12 col-sm-6 col-md-4">
-    <%= render template: "plants/index", :locals => {:@plants => Plant.all, :@q => Plant.ransack(params[:q])}%>
+  <div id="plant_searcher" class="col-xs-12 col-sm-6 col-md-4">
+    <% if @q %>
+      <%= render template: "plants/index?utf8=✓&q%5Bname_or_species_cont%5D=#{@q}", :locals => {:@plants => Plant.all, :@q => Plant.ransack(params[:q])}%>
+    <% else %>
+      <%= render template: "plants/index", :locals => {:@plants => Plant.all, :@q => Plant.ransack(params[:q])}%>
+    <% end %>
   </div>
 
 </div>
