@@ -3,6 +3,7 @@ class PlantsController < ApplicationController
   def index
     @q = Plant.ransack(params[:q])
     @plants = @q.result(distinct: true)
+    # redirect_to :my_profile
   end
 
   def show

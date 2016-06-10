@@ -1,8 +1,11 @@
-<h1>Great houseplants</h1>
+<h2>Great houseplants</h2>
 
 <div class="form-group">
   <%= search_form_for @q do |f| %>
     <%= f.search_field :name_or_species_cont, placeholder: "search for a plant", class: "form-control", url: my_profile_path %>
+    <% @last_string = capture do %>
+      <% "?utf8=✓&q%5Bname_or_species_cont%5D=#{@q}" %>
+    <% end %>
   <% end %>
 </div>
 
