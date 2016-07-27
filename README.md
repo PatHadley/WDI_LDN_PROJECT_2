@@ -3,12 +3,29 @@
 
 Built by Pat Hadley as part of the General Assembly Web Development Immersive Course. London, Spring 2016.
 
-###Concept:
+###The concept
 
-A social user-to-user app to help users keep their houseplants healthy while on holiday and keep track of the plants they own.
+A social user-to-user app to help users get their houseplants cared for while on holiday and keep track of the plants they own.
 
-<iframe id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="550" height="400" src="https://prezi.com/embed/7pznnqg7hu6h/?bgcolor=ffffff&amp;lock_to_path=1&amp;autoplay=0&amp;autohide_ctrls=0&amp;landing_data=bHVZZmNaNDBIWnNjdEVENDRhZDFNZGNIUE43MHdLNWpsdFJLb2ZHanI0aXpYWWRoZ2tVZThzSTREeGFVempsNERnPT0&amp;landing_sign=C1jSZLCyLOIPaIDPhwAQig5RkrmhLcnhim9mlupVNns">
-</iframe>
+![Dead houseplant](http://www.gardeningknowhow.com/wp-content/uploads/2007/12/dead-plant.jpg)
+
+As a learning project, this was a chance to build a full-stack Ruby on Rails app with a user model and various gems. Just don't take the concept too seriously...
+
+###The pitch
+![Welcome to GreenDigits](https://raw.githubusercontent.com/PatHadley/scratchpad/master/greendigits-welcome-screenshot.png)
+
+_GreenDigits_ is a friendly way to prevent houseplant death! One holiday at a time.
+
+_GreenDigits_ attempted to tackle three causes of houseplant death.
+
+* owners go on holiday - plants get no care :white_check_mark:
+* owners don't know how to care for the particular varieties they own :x:
+* owners forget to care for them because of busy lives :x:
+
+The first of these was acheived using user-to-user email as the messaging tool.
+The second was partly acheived with the use of a third party houseplant dataset.
+The third - implementing calendar functions - was not acheived during the project build.
+
 
 ###Technology
 Ruby Gems used:
@@ -20,6 +37,7 @@ Ruby Gems used:
 * turbolinks
 
 CSS Framework:
+
 * bootstrap
 
 
